@@ -1,0 +1,108 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="stylee.css">
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif; /* Add a default font-family */
+            font-size: 20px;
+        }
+
+        nav {
+            padding: 10px;
+        }
+
+        .logo {
+            max-width: 100px; /* Set a maximum width for the logo */
+        }
+
+        .div1 {
+            width: 70%; /* Set the width of the container */
+            margin: 20px auto; /* Center the container */
+            text-align: left; /* Align the text to the left */
+        }
+
+        h1, h2, p {
+            font-size: 16px; /* Reduce font size for headings and paragraphs */
+            color: white; /* Set the color for headings and paragraphs */
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: white; /* Set the color for the second heading */
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .image-container a {
+            text-decoration: none;
+            position: relative;
+            display: block;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            max-height: 50px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .image-container a:hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+            border-radius: 5px;
+        }
+
+        .image-container a:hover img {
+            transform: scale(1.05);
+        }
+
+        .rating-text {
+            
+            color: white;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <nav>
+    <img class="logo" src="solar.webp" alt="Logo">
+    <a href="main_page.html" id="home-link" class="active">Home</a>
+    <a href="index.html" id="pricing-link">Pricing</a>
+    <a href="http://status.solarhosting.cc" id="status-link">Status</a>
+    <a href="about.html" id="about-link">About</a>
+      
+    <a href="http://wiki.solarhosting.cc" id="wiki-link">Wiki</a>
+    <button><a href="index.html">Get Started</button>
+</nav>
+
+    <div class="div1">  
+        <h1>About Us</h1>
+        <p>SolarHosting offers affordable hosting without sacrificing performance or uptime!</p>
+    
+        <h2>Contact Information</h2>
+        <p>General: admin@solarhosting.cc</p>
+        <p>Reporting: abuse@solarhosting.cc</p>
+        <p>Customer Service: <i>Discord</i></p>
+    </div>
+
+    <div class="image-container">
+        <a href="https://www.trustpilot.com/review/solarhosting.cc">
+            <img src="rating.webp" alt="Image 1"> <span class="rating-text">4.5 stars</span>
+        </a>
+    </div>
+</body>
+</html>

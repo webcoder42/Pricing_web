@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .logo {
+            max-width: 100px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: normal;
+            font-size: 16px;
+        }
+
+        nav a.active:hover {
+            background-color: #550055;
+            color: white;
+        }
+
+        section {
+            text-align: center;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h7 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-align: center; /* Center the text */
+            color: white; /* Set text color to white */
+        }
+
+        .image-container a {
+            text-decoration: none;
+        }
+
+        .image-container img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 1px;
+            margin-bottom: 10px;
+        }
+
+       .box-container {
+            display: flex;
+            justify-content: space-around; /* Adjust as needed */
+            flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+        } 
+
+        .box {
+            background-color: white; 
+            padding: 20px;
+            margin: 10px;
+            border-radius: 5px;
+            max-width: 300px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #550055; /* Dark purple */
+            color: white; /* White text color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+    <img class="logo" src="solar.webp" alt="Logo">
+    <a href="main_page.html" id="home-link" class="active">Home</a>
+    <a href="index.html" id="pricing-link">Pricing</a>
+    <a href="http://status.solarhosting.cc" id="status-link">Status</a>
+    <a href="about.html" id="about-link">About</a>
+      
+    <a href="http://wiki.solarhosting.cc" id="wiki-link">Wiki</a>
+    <button><a href="index.html">Get Started</button>
+</nav>
+   
+    <section>
+         <h7>You've Selected</h7>
+        <div class="image-container">
+            <img src="a.webp" alt="Image 1">
+        </div>
+        <h7>Pick Your Plane</h7>
+
+        <div class="box-container">
+            <div class="box">
+                <h2>Small txAdmin</h2>
+                <p>Price: $2.75/m</p>
+                 <p>2 GB RAM</p>
+                  <p>75 GB storage</p>
+                   <p>Unlimited CPU*</p>
+                <button>Select Plan</button>
+            </div>
+
+            <div class="box">
+               <h2>Medium txAdmin</h2>
+                <p>Price: $5/m</p>
+                 <p>4 GB RAM</p>
+                  <p>100 GB storage</p>
+                   <p>Unlimited CPU*</p>
+                <button>Select Plan</button>
+            </div>
+
+            <div class="box">
+               <h2>Large txAdmin</h2>
+                <p>Price: $7/m</p>
+                 <p>6 GB RAM</p>
+                  <p>125 GB storage</p>
+                   <p>Unlimited CPU*</p>
+                <button>Select Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.getElementById("go-back-button").addEventListener("click", function() {
+            window.location.href = "index.html"; // Change this to the desired page
+        });
+    </script>
+</body>
+</html>

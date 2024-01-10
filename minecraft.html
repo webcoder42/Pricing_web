@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .logo {
+            max-width: 100px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: normal;
+            font-size: 16px;
+        }
+
+        nav a.active:hover {
+            background-color: #550055;
+            color: white;
+        }
+
+        section {
+            text-align: center;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h7 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-align: center; /* Center the text */
+            color: white; /* Set text color to white */
+        }
+
+        .image-container a {
+            text-decoration: none;
+        }
+
+        .image-container img {
+            max-width: 50%;
+            height: auto;
+            border-radius: 1px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .b, .b1 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap; /* Allow wrapping to the next line if needed */
+        }
+
+        .b button, .b1 button {
+            margin: 5px; /* Add margin between buttons */
+            padding: 20px;
+            width: 200px; /* Set a fixed width for the buttons */
+            background-color: #550055;
+            color: white;
+            border: none;
+            border-radius: 20px; /* Adjust the border-radius to make it circular */
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .b button:hover, .b1 button:hover {
+            transform: scale(1.1);
+            background-color: #440044;
+        }
+
+        .b button img, .b1 button img {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px; /* Adjust the spacing between image and text */
+        }
+    </style>
+</head>
+<body>
+   <nav>
+    <img class="logo" src="solar.webp" alt="Logo">
+    <a href="main_page.html" id="home-link" class="active">Home</a>
+    <a href="index.html" id="pricing-link">Pricing</a>
+    <a href="http://status.solarhosting.cc" id="status-link">Status</a>
+    <a href="about.html" id="about-link">About</a>
+      
+    <a href="http://wiki.solarhosting.cc" id="wiki-link">Wiki</a>
+    <button><a href="index.html">Get Started</button>
+</nav>
+   
+    <section>
+        <h7>You've Selected</h7>
+        <div class="image-container">
+            <img src="minecraft.webp" alt="Image 1">
+        </div>
+        <h7>Server Type</h7>
+
+       <div class="b">
+           <button><img src="minecraft.webp"><a href="minecraft_buy.html"> vanilla</button>
+           <button><img src="plane.webp">PaperMC</button>
+           <button><img src="wait.webp">Forge</button>
+       </div>
+       <div class="b1">
+           <button><img src="spigot.webp">spigot</button>
+           <button>Custom</button>
+           <button><img src="bijli.webp">Bungeecord</button>
+       </div>
+    </section>
+
+   <script>
+    document.getElementById("go-back-button").addEventListener("click", function() {
+        window.location.href = "index.html"; // Change this to the desired page
+    });
+
+    // Example for the "vanilla" button
+    document.querySelector(".b button:nth-child(1)").addEventListener("click", function() {
+        window.location.href = "minecraft_buy.html"; // Change this to the desired page
+    });
+
+    // Example for the "PaperMC" button
+    document.querySelector(".b button:nth-child(2)").addEventListener("click", function() {
+        window.location.href = "papermc.html"; // Change this to the desired page
+    });
+
+    // Add similar event listeners for other buttons as needed
+</script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            background-color: #f4f4f4;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        section {
+            text-align: center;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h7 {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: left;
+            color: white;
+        }
+
+        input[type="range"] {
+            width: 80%;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-bottom: 10px;
+            background-color: transparent;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 30px;
+            height: 30px;
+            background-color: #550055;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-top: -10px;
+            position: relative;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 30px;
+            height: 30px;
+            background-color: #550055;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+        }
+
+        input[type="range"]::-webkit-slider-runnable-track {
+            height: 10px;
+            background: #550055;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #550055;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #440044;
+        }
+
+        p {
+            color: #550055;
+            font-size: 18px;
+        }
+
+        /* Additional style for the value display */
+        .slider-value {
+            position: absolute;
+            top: -40px; /* Adjust the vertical position */
+            left: 50%;
+            transform: translateX(-50%);
+            color: #550055;
+        }
+    </style>
+</head>
+<body>
+   <nav>
+    <img class="logo" src="solar.webp" alt="Logo">
+    <a href="main_page.html" id="home-link" class="active">Home</a>
+    <a href="index.html" id="pricing-link">Pricing</a>
+    <a href="http://status.solarhosting.cc" id="status-link">Status</a>
+    <a href="about.html" id="about-link">About</a>
+      
+    <a href="http://wiki.solarhosting.cc" id="wiki-link">Wiki</a>
+    <button><a href="index.html">Get Started</button>
+</nav>
+   
+    <section>
+        <h7>Amount Of Player:</h7>
+        <input type="range" id="playerCount" min="1" max="100" value="1" step="1" oninput="updateSliderValue()">
+        <div class="slider-value" id="sliderValue">1</div>
+        <button onclick="calculatePrice()">Calculate Price</button>
+        <p id="result"></p>
+    </section>
+
+    <script>
+        function calculatePrice() {
+            const playerCount = document.getElementById("playerCount").value;
+            const pricePerPlayer = 5;
+            const totalPrice = playerCount * pricePerPlayer;
+
+            document.getElementById("result").innerText = `Total Price: $${totalPrice}`;
+        }
+
+        function updateSliderValue() {
+            const slider = document.getElementById("playerCount");
+            const sliderValue = document.getElementById("sliderValue");
+            sliderValue.innerText = slider.value;
+        }
+    </script>
+</body>
+</html>

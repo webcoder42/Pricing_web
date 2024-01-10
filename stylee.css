@@ -1,0 +1,83 @@
+/* stylee.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('color.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+nav {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px;
+}
+.logo {
+    max-width: 300px;
+    margin-right: auto;
+}
+
+nav a {
+    color: gray;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #550055;
+    color: white;
+}
+
+nav button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+nav button:hover {
+    background-color: purple;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    
+}
+
+img {
+    max-width: 20%; /* Adjust image width */
+    height: auto;
+    margin: 10px; /* Add some margin around the images */
+}
+
+.text-content {
+    text-align: left; /* Align the text to the left */
+    padding-left: 20px; /* Add padding to separate text from image */
+}
+
+h1 {
+    color: white; /* Set heading color to a dark shade */
+}
+
+p {
+    color: white; /* Set paragraph text color to white */
+    font-size: 30px; /* Increase paragraph font size */
+    padding: 15px; /* Increase paragraph padding */
+    border-radius: 5px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    margin-top: 20px; /* Add some margin at the top of the image container */
+}
